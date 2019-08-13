@@ -7,7 +7,7 @@ ifneq ($(GIT_DESC),)
 endif
 
 CC	?= clang
-CFLAGS += -Wall -std=c99 -Os -DVERSION="\"$(VERSION)\"" -I/usr/include/freetype2
+CFLAGS += -Wall -std=c99 -O3 -DVERSION="\"$(VERSION)\"" -I/usr/include/freetype2
 LDFLAGS += -lxcb -lxcb-xinerama -lxcb-randr -lX11 -lX11-xcb -lXft -lfreetype -lz -lfontconfig
 CFDEBUG = -g3 -pedantic -Wall -Wextra -Wlong-long -Wsign-conversion -Wconversion
 
