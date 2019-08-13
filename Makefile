@@ -2,8 +2,8 @@
 VERSION = 1.3
 GIT_DESC=$(shell test -d .git && git describe --always 2>/dev/null)
 
-ifneq "$(GIT_DESC)" ""
-	VERSION=$(GIT_DESC)
+ifneq ($(GIT_DESC),)
+	VERSION += git@$(GIT_DESC)
 endif
 
 CC	?= gcc
